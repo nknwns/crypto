@@ -1,0 +1,51 @@
+body {
+    --bg-color: #eee;
+    --header-bg: #fff;
+    --header-color: #4b5563;
+    --header-color-hover: #111827;
+    --box-bg: #fff;
+    --box-border-bg: #e5e7eb;
+    --text-color: #111827;
+    --th-color: #6b7280;
+    --input-bg: #f3f4f6;
+    --input-border: #e5e7eb;
+    --button-bg: #323743;
+    --tooltip-bg: #111827;
+    --tooltip-color: #f3f4f6;
+    --badge-bg: #e8e8e8;
+
+    font-family: 'Fira Code', monospace;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    
+    &.dark {
+        --bg-color: #0d1321;
+        --header-bg: var(--bg-color);
+        --header-color: #d1d5db;
+        --header-color-hover: #fff;
+        --box-bg: #171e2e;
+        --box-border-bg: #374151;
+        --text-color: #fff;
+        --th-color: #d1d5db;
+        --input-bg: #1f2937;
+        --input-border: #4b5563;
+        --tooltip-bg: #f3f4f6;
+        --tooltip-color: #111827;
+        --badge-bg: #28313f;
+    }
+}
+
+main {
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+
+ul {
+    margin: 0;
+    list-style: none;
+}
+
+#chartdiv {
+    width: 100%;
+    height: 400px;
+}

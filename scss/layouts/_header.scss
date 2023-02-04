@@ -1,0 +1,27 @@
+.header {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    background-color: var(--header-bg);
+
+    &__nav {
+        display: flex;
+        align-items: center;
+
+        color: var(--header-color);
+    }
+
+    &__menu {
+        height: 80px;
+    }
+
+    &__button {
+        margin-left: auto;
+    }
+
+    &__label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}

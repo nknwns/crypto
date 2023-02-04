@@ -1,0 +1,42 @@
+.box {
+    background-color: var(--box-bg);
+    border-radius: 0.5rem;
+
+    &--header {
+        padding: 2rem 2rem 1.25rem;
+        border-bottom: 1px dashed var(--box-border-bg);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    &--footer {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    &--inline {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__header {
+        padding: 1rem 1.25rem;
+        border-bottom: 1px dashed var(--box-border-bg);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    &__body {
+        padding: 1.25rem;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+}

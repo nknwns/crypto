@@ -1,0 +1,22 @@
+.button {
+    font-family: 'Fira code';
+    padding: 1rem 2rem;
+    font-size: .875rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1.25rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: none;
+    background-color: var(--button-bg);
+    color: #fff;
+    transition: transform .6s ease;
+
+    &--fluid {
+        width: 100%;
+    }
+
+    &:hover {
+        transform: translateY(5px);
+    }
+}

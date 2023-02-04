@@ -1,0 +1,40 @@
+.form {
+    &__input {
+        font-family: 'Fira code';
+        font-size: .875rem;
+        line-height: 1.25rem;
+        color: var(--text-color);
+        padding-left: 1rem;
+        padding-right: 1rem;
+        background-color: var(--input-bg);
+        border-radius: 0.5rem;
+        height: 2.75rem;
+        border: 1px solid var(--input-border);
+        outline: none;
+
+        &--fluid {
+            width: 100%;
+        }
+
+        &--number {
+            padding: 0.5rem 0.75rem;
+            width: 100px;
+            height: 2.25rem;
+        }
+    }
+
+    &__field {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        &:nth-child(n + 1) {
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+optgroup {
+    font-size: .875rem;
+    font-weight: 500;
+}

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reseter.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="scss/main.css">
+</head>
+<body>
+    <header class="header shadow">
+        <div class="container-fluid px-5">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="header__nav">
+                        <a href="/" class="header__logo">Crypto</a>
+                        <ul class="header__menu menu">
+                            <li class="menu__item">
+                                <a href="/" class="menu__link">Home</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="history.html" class="menu__link">Transactions</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="p2p.html" class="menu__link">Peer-to-Peer</a>
+                            </li>
+                        </ul>
+                        <span class="header__button">
+                            <label for="theme" class="header__label">
+                                Dark Mode
+                                <input type="checkbox" name="theme" class="switch">
+                            </label>
+                        </span>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="section history">
+            <div class="container-fluid px-5">
+                <div class="row">
+                    <div class="col-md-3">
+                        <form class="options form">
+                            <div class="box shadow options__item">
+                                <div class="box__header">
+                                    <span class="box__title">Source</span>
+                                </div>
+                                <div class="box__body">
+                                    <div class="form__field">
+                                        <label for="source" hidden>Source</label>
+                                        <input required type="text" id="source" name="source" class="form__input form__input--fluid" placeholder="Source">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box shadow options__item">
+                                <div class="box__header">
+                                    <span class="box__title">Amount</span>
+                                </div>
+                                <div class="box__body">
+                                    <div class="form__field">
+                                        <label for="start-amount">From</label>
+                                        <input type="number" id="start-amount" name="left-amount" class="form__input form__input--number" placeholder="0" min="0">
+                                        <label for="end-amount">To</label>
+                                        <input type="number" id="end-amount" name="right-amount" class="form__input form__input--number" placeholder="123" min="0">
+                                        <span>BTC</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box shadow options__item">
+                                <div class="box__header">
+                                    <span class="box__title">Date and time</span>
+                                </div>
+                                <div class="box__body">
+                                    <div class="form__field">
+                                        <label for="start-date">From</label>
+                                        <input type="datetime-local" id="start-date" name="start-date" class="form__input">
+                                    </div>
+                                    <div class="form__field">
+                                        <label for="end-date">To</label>
+                                        <input type="datetime-local" id="end-date" name="end-date" class="form__input">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box shadown options__item">
+                                <div class="box__header">
+                                    <span class="box__title">Sorting method</span>
+                                </div>
+                                <div class="box__body">
+                                    <label for="sorting" hidden>Sorting method</label>
+                                    <select name="sorting" id="sorting" class="form__input form__input--select">
+                                        <optgroup>
+                                            <option selected disabled>Choose sorting method</option>
+                                            <option value="method-code">First method</option>
+                                            <option value="method-code">Second method</option>
+                                            <option value="method-code">One more method</option>
+                                            <option value="firsh-method-code">Etc..</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                            </div>
+                            <button class="form__button button button--fluid">Apply</button>
+                        </form>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="box shadown mb-4">
+                            <div class="box__header">
+                                <span class="box__title">Graph</span>
+                            </div>
+                            <div class="box__body">
+                                <div id="chartdiv"></div>
+                            </div>
+                        </div>
+                        <div class="box box--header box--inline">
+                            <h2 class="box__title">Transaction history
+                                <span class="box__badge badge">
+                                    <span class="badge__detail">For</span>    
+                                    <span class="badge__content">2342354gdsfdsf4fdsfsdgdf4</span>
+                                    <span class="badge__detail">And</span>    
+                                    <span class="badge__content">2342354gdsfdsf4fdsfsdgdf4</span>
+                                </span>
+                            </h2>
+                        </div>
+                        <table class="table">
+                            <thead class="table__header">
+                                <tr class="box box--footer">
+                                    <th>Type</th>
+                                    <th>Date</th>
+                                    <th>Source</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table__body">
+                                <tr class="transaction box shadow">
+                                    <td class="success">Receiving</td>
+                                    <td>14 August 2022</td>
+                                    <td>2342354gdsfdsf4fdsfsdgdf4</td>
+                                    <td>
+                                        <div class="table__amount">
+                                            <span class="table__strong btc-to-usd" data-btc="0.2231345">0.2231345 BTC</span>
+                                            <span class="table__helper btc-to-usd" data-btc="0.0002">Fee: 0.0002 BTC</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="transaction box shadow">
+                                    <td class="danger">Sending</td>
+                                    <td>14 August 2022</td>
+                                    <td>2342354g3sfdsf4fdsfsdgdf4</td>
+                                    <td>
+                                        <div class="table__amount">
+                                            <span class="table__strong btc-to-usd" data-btc="0.2231345">0.2231345 BTC</span>
+                                            <span class="table__helper btc-to-usd" data-btc="0.0002">Fee: 0.0002 BTC</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="transaction box shadow">
+                                    <td class="success">Receiving</td>
+                                    <td>14 August 2022</td>
+                                    <td>2342354gdsfdsf4fdsfadgdf4</td>
+                                    <td>
+                                        <div class="table__amount">
+                                            <span class="table__strong btc-to-usd" data-btc="0.2231345">0.2231345 BTC</span>
+                                            <span class="table__helper btc-to-usd" data-btc="0.0002">Fee: 0.0002 BTC</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="transaction box shadow">
+                                    <td class="danger">Sending</td>
+                                    <td>14 August 2022</td>
+                                    <td>2342354gdsfdsd4fdsfsdgdf4</td>
+                                    <td>
+                                        <div class="table__amount">
+                                            <span class="table__strong btc-to-usd" data-btc="0.2231345">0.2231345 BTC</span>
+                                            <span class="table__helper btc-to-usd" data-btc="0.0002">Fee: 0.0002 BTC</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="transaction box shadow">
+                                    <td class="success">Receiving</td>
+                                    <td>14 August 2022</td>
+                                    <td>2342354gdsfdsd4fdsfsdgdf4</td>
+                                    <td>
+                                        <div class="table__amount">
+                                            <span class="table__strong btc-to-usd" data-btc="0.2231345">0.2231345 BTC</span>
+                                            <span class="table__helper btc-to-usd" data-btc="0.0002">Fee: 0.0002 BTC</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="transaction box shadow">
+                                    <td class="success">Sending</td>
+                                    <td>14 August 2022</td>
+                                    <td>2342354gdsfdsd4fdsfsdgdf4</td>
+                                    <td>
+                                        <div class="table__amount">
+                                            <span class="table__strong btc-to-usd" data-btc="0.2231345">0.2231345 BTC</span>
+                                            <span class="table__helper btc-to-usd" data-btc="0.0002">Fee: 0.0002 BTC</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="transaction box shadow">
+                                    <td class="success">Receiving</td>
+                                    <td>14 August 2022</td>
+                                    <td>2342354gdsfdsd4fdsqsdgdf4</td>
+                                    <td>
+                                        <div class="table__amount">
+                                            <span class="table__strong btc-to-usd" data-btc="0.2231345">0.2231345 BTC</span>
+                                            <span class="table__helper btc-to-usd" data-btc="0.0002">Fee: 0.0002 BTC</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="transaction box shadow">
+                                    <td class="success">Receiving</td>
+                                    <td>14 August 2022</td>
+                                    <td>2342354gdsfdsf4fddbsdgdf4</td>
+                                    <td>
+                                        <div class="table__amount">
+                                            <span class="table__strong btc-to-usd" data-btc="0.2231345">0.2231345 BTC</span>
+                                            <span class="table__helper btc-to-usd" data-btc="0.0002">Fee: 0.0002 BTC</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/hierarchy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

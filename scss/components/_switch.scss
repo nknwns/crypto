@@ -1,0 +1,22 @@
+.switch {
+    border-radius: 40px;
+    width: 48px;
+    height: 26px;
+    background-color: #d9dbe9;
+    border: 1px solid rgba(0,0,0,.25);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: 1%;
+    background-image: url('../img/switch-off.svg');
+    background-size: contain;
+    transition: background-position .2s ease-in-out;
+
+    &:checked {
+        background-color: #5f2eea;
+        background-position: 99%;
+        background-image: url('../img/switch-on.svg');
+    }
+}

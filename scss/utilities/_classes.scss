@@ -1,0 +1,33 @@
+.shadow {
+    box-shadow: 0 0 #000, 0 0 #000, 0px 2px 6px rgba(0,0,0,.06);
+}
+
+.success {
+    color: #1deca8;
+}
+
+.danger {
+    color: #ff5f5f;
+}
+
+.tooltip {
+    position: relative;
+
+    &::before {
+        content: '$' attr(data-usd);
+        position: absolute;
+        top: -10px;
+        right: 105%;
+        line-height: 30px;
+        background-color: var(--tooltip-bg);
+        color: var(--tooltip-color);
+        padding: 0 1rem;
+        border-radius: 0.5rem;
+        opacity: 0;
+        transition: opacity .5s ease;
+    }
+
+    &:hover::before {
+        opacity: 1;
+    }
+}

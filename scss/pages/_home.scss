@@ -1,0 +1,72 @@
+.home {
+    height: calc(100vh - 120px);
+
+    &__list {
+        display: flex;
+        gap: 5px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    &__item {
+        width: calc(25% - 5px);
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+
+    &__preview {
+        max-width: 100%;
+    }
+}
+
+.card {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--box-bg);
+
+    &__subtitle {
+        color: #8c9db5;
+        font-size: .875rem;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+
+    &__exchange {
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+    }
+
+    &__amount {
+        font-weight: bold;
+    }
+}
+
+.description {
+
+    &__title {
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    &__text {
+        line-height: 1.5rem;
+    }
+
+    &__list {
+        margin-top: 1rem;
+        font-weight: 500;
+        list-style:decimal;
+        margin-left: 2rem;
+    }
+
+    &__item {
+        margin-bottom: 0.25rem;
+    }
+}

@@ -1,0 +1,16 @@
+.badge {
+    display: flex;
+    border-radius: 0.25rem;
+    font-size: .75rem;
+    background-color: var(--badge-bg);
+
+    &__content {
+        padding: 0.75rem 1rem;
+        text-transform: none;
+    }
+
+    &__detail {
+        background-color: rgba(0, 0, 0, .1);
+        padding: 0.75rem 1rem;
+    }
+}
